@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BS";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACE>, <&kp DELETE>;
+            bindings = <&kp RIGHT_BRACE>, <&kp BACKSPACE>;
 
             tapping-term-ms = <125>;
         };
