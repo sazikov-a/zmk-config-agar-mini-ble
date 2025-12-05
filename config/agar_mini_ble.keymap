@@ -9,71 +9,33 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        td_bs: td_bs {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_BS";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp RIGHT_BRACE>;
-
-            tapping-term-ms = <125>;
-        };
-
-        td_enter: td_enter {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_ENTER";
-            #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp BACKSLASH>;
-
-            tapping-term-ms = <125>;
-        };
-
-        td_dot: td_dot {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_DOT";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp SLASH>;
-
-            tapping-term-ms = <125>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&mt GRAVE ESCAPE  &kp Q      &kp W     &kp E  &kp R        &kp T  &kp Y        &kp U  &kp I      &kp O          &kp P       &kp LEFT_BRACE  &td_bs
-&mt CAPS TAB      &kp A      &kp S     &kp D  &kp F        &kp G  &kp H        &kp J  &kp K      &kp L          &kp SEMI    &td_enter
-&kp LSHFT         &kp Z      &kp X     &kp C  &kp V        &kp B  &kp N        &kp M  &kp COMMA  &td_dot        &kp RSHIFT  &mo 3
-                  &kp LCTRL  &kp LALT         &lt 2 SPACE         &lt 1 SPACE                    &kp RIGHT_ALT  &kp RCTRL
+&kp ESCAPE    &kp Q      &kp W     &kp E  &kp R        &kp T  &kp Y        &kp U  &kp I      &kp O          &kp P       &kp LEFT_BRACE  &kp RIGHT_BRACE
+&mt CAPS TAB  &kp A      &kp S     &kp D  &kp F        &kp G  &kp H        &kp J  &kp K      &kp L          &kp SEMI    &kp ENTER
+&kp LSHFT     &kp Z      &kp X     &kp C  &kp V        &kp B  &kp N        &kp M  &kp COMMA  &kp DOT        &kp RSHIFT  &kp BACKSPACE
+              &kp LCTRL  &kp LALT         &lt 1 SPACE         &lt 2 SPACE                    &kp RIGHT_ALT  &kp RCTRL
             >;
         };
 
-        layer1 {
+        layer_1 {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL
-&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-           &trans  &trans          &trans          &trans                  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans          &trans          &trans                  &trans  &trans          &trans
             >;
         };
 
-        layer2 {
+        layer_2 {
             bindings = <
-&trans  &trans          &kp UP_ARROW  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans          &trans                   &trans          &trans                  &trans  &trans
-            >;
-        };
-
-        layer3 {
-            bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9       &kp F10       &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &kp C_VOL_UP  &trans
-        &trans  &trans          &trans          &trans                  &kp C_MUTE   &kp C_VOL_DN
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans          &trans          &trans                  &trans  &trans          &trans
             >;
         };
     };
