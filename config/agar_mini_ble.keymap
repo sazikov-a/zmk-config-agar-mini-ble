@@ -42,10 +42,10 @@
 
         layer_3 {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans       &trans             &trans  &trans
-&trans          &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans       &trans             &trans
-&trans          &trans        &trans  &trans  &trans  &trans  &trans  &reset  &studio_unlock  &bootloader  &kp C_VOLUME_UP    &trans
-                &trans        &trans          &trans          &trans                          &kp K_MUTE   &kp C_VOLUME_DOWN
+&bt BT_CLR_ALL  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans       &trans             &trans  &trans
+&trans          &trans        &trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans       &trans             &trans
+&trans          &trans        &trans  &trans  &trans  &trans  &trans  &sys_reset  &studio_unlock  &bootloader  &kp C_VOLUME_UP    &trans
+                &trans        &trans          &trans          &trans                              &kp K_MUTE   &kp C_VOLUME_DOWN
             >;
         };
     };
